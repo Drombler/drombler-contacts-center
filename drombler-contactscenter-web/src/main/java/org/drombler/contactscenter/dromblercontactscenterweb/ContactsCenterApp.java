@@ -1,13 +1,13 @@
 package org.drombler.contactscenter.dromblercontactscenterweb;
 
-import org.springframework.boot.SpringApplication;
+import ch.sbb.esta.openshift.gracefullshutdown.GracefulshutdownSpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DromblerContactscenterWebApplication {
+public class ContactsCenterApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DromblerContactscenterWebApplication.class, args);
+		GracefulshutdownSpringApplication.run(ContactsCenterApp.class, args);
 	}
 
 }

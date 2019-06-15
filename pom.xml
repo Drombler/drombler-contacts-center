@@ -3,14 +3,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.5.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<groupId>org.drombler</groupId>
+		<artifactId>drombler-oss-parent</artifactId>
+		<version>3.3-SNAPSHOT</version>
+		<relativePath />
 	</parent>
 	<groupId>org.drombler.contactscenter</groupId>
 	<artifactId>drombler-contactscenter</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>drombler-contactscenter-web</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -20,6 +21,7 @@
 
         <modules>
             <module>drombler-contactscenter-web</module>
-        </modules>
+			<module>drombler-contactscenter-integration-persistence</module>
+		</modules>
 
 </project>
