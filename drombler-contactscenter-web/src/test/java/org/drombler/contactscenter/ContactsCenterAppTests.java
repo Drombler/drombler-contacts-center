@@ -1,4 +1,4 @@
-package org.drombler.contactscenter.dromblercontactscenterweb;
+package org.drombler.contactscenter;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

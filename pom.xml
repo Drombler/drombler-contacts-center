@@ -1,27 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.drombler</groupId>
-		<artifactId>drombler-oss-parent</artifactId>
-		<version>3.3-SNAPSHOT</version>
-		<relativePath />
-	</parent>
-	<groupId>org.drombler.contactscenter</groupId>
-	<artifactId>drombler-contactscenter</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<name>drombler-contactscenter-web</name>
-	<description>Demo project for Spring Boot</description>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.drombler</groupId>
+        <artifactId>drombler-oss-parent</artifactId>
+        <version>3.3-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
 
-	<properties>
-		<java.version>11</java.version>
-	</properties>
+    <groupId>org.drombler.contactscenter</groupId>
+    <artifactId>drombler-contactscenter</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-        <modules>
-            <module>drombler-contactscenter-web</module>
-			<module>drombler-contactscenter-integration-persistence</module>
-		</modules>
+    <name>drombler-contactscenter</name>
+    <description>Drombler Contacts Center</description>
+    <inceptionYear>2019</inceptionYear>
+
+    <properties>
+        <java.version>11</java.version>
+        <smack.version>4.3.4</smack.version>
+    </properties>
+
+    <modules>
+        <module>drombler-contactscenter-web</module>
+        <module>drombler-contactscenter-integration-persistence</module>
+        <module>drombler-contactscenter-integration-xmpp</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.igniterealtime.smack</groupId>
+                <artifactId>smack-tcp</artifactId>
+                <version>${smack.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.igniterealtime.smack</groupId>
+                <artifactId>smack-im</artifactId>
+                <version>${smack.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.igniterealtime.smack</groupId>
+                <artifactId>smack-extensions</artifactId>
+                <version>${smack.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.igniterealtime.smack</groupId>
+                <artifactId>smack-java7</artifactId>
+                <version>${smack.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.annotation</groupId>
+                <artifactId>jakarta.annotation-api</artifactId>
+                <version>1.3.4</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
 </project>
