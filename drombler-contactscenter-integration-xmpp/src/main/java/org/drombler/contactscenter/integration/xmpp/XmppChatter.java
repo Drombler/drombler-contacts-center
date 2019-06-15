@@ -5,7 +5,6 @@ import org.jivesoftware.smack.SmackException;
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.tcp.XMPPTCPConnection;
 import org.jivesoftware.smack.tcp.XMPPTCPConnectionConfiguration;
-import org.jxmpp.stringprep.XmppStringprepException;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -27,17 +26,9 @@ public void setUp(){
         AbstractXMPPConnection connection = new XMPPTCPConnection(config);
         connection.connect()
                 .login();
-    } catch (XmppStringprepException e) {
+    } catch (InterruptedException | IOException | SmackException | XMPPException e) {
         e.printStackTrace();
 
-    } catch (InterruptedException e) {
-        e.printStackTrace();
-    } catch (IOException e) {
-        e.printStackTrace();
-    } catch (SmackException e) {
-        e.printStackTrace();
-    } catch (XMPPException e) {
-        e.printStackTrace();
     }
-}
+    }
 }
